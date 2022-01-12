@@ -43,7 +43,8 @@
  досягнення ним повнолітнього віку. 
  Результат запишіть в змінну isAdult і виведіть в консоль.
 */
-
+let isAdult = confirm("Are you over 18");
+console.log(isAdult);
 
 /*6. В зовнішньому файлі напишіть скріпт, в якому оголосіть змінні,
  для збереження таких даних:
@@ -67,6 +68,12 @@
  повідомлення із введеними даними. Наприклад “Dear User, 
  your email is usermale@gmail.com, your password is qwerty”.
 */
+
+let login = prompt("Enter your login");
+let email = prompt("Enter your email");
+let password = prompt("Enter your password");
+
+document.write(`Dear ${login}, your email is ${email}, your password is ${password}`)
 
 /*8. Напишіть скріпт, який вираховує кількість секунд в годині, в добі, 
 в місяці, записує результати в відповідні змінні, і виводить їх значення
