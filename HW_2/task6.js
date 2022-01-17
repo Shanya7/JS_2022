@@ -9,9 +9,20 @@
     const b = +prompt("Enter number b");
     const c = +prompt("Enter number c");
  
-    const p = (a+b+c)/2;
+   
+
+    if(isNaN(a) || isNaN(b) || isNaN(c) || a===0 || b===0 ||c==0) {
+	alert("Incorrect data");
+    }
+
+     const p = (a+b+c)/2;
     const s = (p*(p-a)*(p-b)*(p-c))**(1/2);
- 
-    console.log(`Площа трикутника  ${s}`);
+    if(isNaN(s)){
+	    alert("Incorrect data")
+    }
 
+    if (a*a==b*b+c*c || b*b==a*a+c*c || c*c==a*a+b*b){
+   console.log("Цей трикутник є прямокутним ")
+    }
 
+console.log(`Площа трикутника  ${s.toFixed(3)}`);
