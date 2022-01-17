@@ -5,12 +5,12 @@
 Здійснювати перевірку чи введені користувачем значення коректні, в іншому випадку вивести 'Incorrect data‘.
  Результат обчислення площі трикутника виводити в консоль з точністю 3 знаки після коми (наприклад:  8.42355465 =>  8.424). */
 
-    let a = +prompt("Enter number a");
-    let b = +prompt("Enter number b");
-    let c = +prompt("Enter number c");
+    const a = +prompt("Enter number a");
+    const b = +prompt("Enter number b");
+    const c = +prompt("Enter number c");
  
-    let p = (a+b+c)/2;
-    let s = (p*(p-a)*(p-b)*(p-c))**(1/2);
+    const p = (a+b+c)/2;
+    const s = (p*(p-a)*(p-b)*(p-c))**(1/2);
  
     console.log(`Площа трикутника  ${s}`);
 
