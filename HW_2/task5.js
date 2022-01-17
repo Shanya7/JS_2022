@@ -5,12 +5,21 @@
 
   //#1
   let isAdult = prompt("How old are you? ")
+
   if(isAdult>=18){
      alert("Ви досягли повнолітнього віку");
   }
-  else{
+  else if(isAdult>=10) {
+   alert("Ви не досягли повнолітнього віку");
+  }
+  else if(isAdult<10)
+  {
      alert("Ви ще надто молоді");
   }
+ else if(isAdult === NaN){
+   alert("Incorrect value");
+}
+
 
 
   //#2
