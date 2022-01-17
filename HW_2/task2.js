@@ -6,7 +6,7 @@
 
 */
 
-let number = prompt("Please enter a number");
+const number = prompt("Please enter a number");
 if(number >0 && number%2==0){
     console.log(`${number} є парним додатним`)
 }
