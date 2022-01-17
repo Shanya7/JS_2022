@@ -7,8 +7,8 @@
 В діапазоні годин 17-23 – має виводитися привітання “Доброго вечора”.
 
 */
-var today = new Date();
-var currentHour = today.getHours();
+const today = new Date();
+const currentHour = today.getHours();
 
 //variant 1
   switch(currentHour){
