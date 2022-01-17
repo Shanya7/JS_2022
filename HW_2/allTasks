@@ -1,0 +1,211 @@
+// 1. Є такий код:
+
+let x = 1;
+let y = 2;
+
+let res1 = String(x)+String(y) // Допишіть код, необхідно використовувати змінні x і y
+console.log(res1); // "12"
+console.log(typeof res1); // "string"
+
+let res2 = Boolean(x)+String(y)// Допишіть код, необхідно використовувати змінні x і y
+console.log(res2); // "true2"
+console.log(typeof res2); // "string"
+
+let res3 = Boolean(y-x) // Допишіть код, необхідно використовувати змінні x і y
+console.log(res3); // true
+console.log(typeof res3); // "boolean"
+
+let res4 = Number(String(x)+Boolean(y))// Допишіть код, необхідно використовувати змінні x і y
+console.log(res4); // NaN
+console.log(typeof res4); // "number"
+
+//Допишіть код, щоб в консолі браузера з'явилися рядки, які написані в коментарях, оперуючи при цьому змінними х і у.
+
+
+/*
+2. Користувач вводить число (використовуйте prompt ()). Необхідно перевірити чи є введене число
+	a) парним додатним;
+	b) кратним числу 7.
+Результат перевірки вивести в консоль.
+*/
+
+const number = prompt("Please enter a number");
+if(number >0 && number%2==0){
+    console.log(`${number} є парним додатним`)
+}
+else if( number%7==0){
+    console.log(`${number} є кратним числу 7`)
+
+}
+else{
+    console.log(`${number} не є парним додатним або кратним числу 7`)
+}
+
+/*
+3. Створіть порожній масив;
+1) У перший елемент масиву запишіть будь-яке число;
+2) У другий елемент масиву запишіть будь-який рядок;
+3) У третій елемент масиву запишіть будь-яке логічне значення;
+4) У четвертий елемент масиву запишіть значення null;
+5) Виведіть на екран число елементів, яке зберігається в масиві;
+6) Запитайте у користувача ввести будь-яке значення і запишіть це значення в п'ятий елемент масиву;
+7) Виведіть на екран п'ятий елемент масиву.
+8) Видаліть 1-ий елемент масиву і виведіть масив на екран.
+*/
+
+let myArray = [];
+
+myArray[0] = 15;
+myArray[1] = "Java Script for TA";
+myArray[2] = true;
+myArray[3] = null;
+
+document.write(myArray.length);
+document.write(`</p>`);
+
+myArray[4] = prompt("Enter any value");
+
+document.write(myArray[4]);
+document.write(`</p>`);
+
+myArray.shift();
+
+document.write(myArray);
+document.write(`</p>`);
+
+//4. Напишіть програму, яка об’єднує всі наявні елементи масиву в стрічку і розділяє їх символом “*”.
+//Початковий масив:
+let cities = ["Rome", "Lviv", "Warsaw"];    
+let citiesString = cities.toString();   
+let result = citiesString.replace(/,/gi,'*');
+console.log(result);
+
+//Результуючий масив:
+//"Rome*Lviv*Warsaw"
+
+/*5. Використовуючи функцію prompt() задайте користувачу питання про досягнення ним повнолітнього віку.
+ Результат запишіть в змінну isAdult. В залежності від отриманого значення виведіть відповідне повідомлення про статус особи. 
+ Наприклад: при виконанні умови вік більше 18 вивести “Ви досягли повнолітнього віку”.
+  Якщо вік менше 10 років вивести “Ви ще надто молоді”, */
+
+  //#1
+ const isAdult = prompt("How old are you? ")
+
+  if(isAdult>=18){
+     alert("Ви досягли повнолітнього віку");
+  }
+  else {
+     alert("Ви ще надто молоді");
+  }
+
+
+
+  //#2
+
+  const isAdult = prompt("How old are you? ")
+
+  isAdult>=18 ? alert("Ви досягли повнолітнього віку") : alert("Ви ще надто молоді");
+
+
+//#3
+  const isAdult = prompt("How old are you? ")
+
+  if(isAdult>0 && isAdult<10)
+  {
+     alert("Ви ще надто молоді");
+  }
+   if (isAdult>=10 && isAdult<18){
+     alert("Ви не досягли повнолітнього віку");
+   }
+   else if (isAdult>=18){
+     alert("Ви досягли повнолітнього віку");
+  }
+  
+  else {
+   alert("Incorrect value");
+}
+
+/*6. Користувач вводить три довжини сторін трикутника (використовуйте prompt () три рази для введення кожної сторони).
+Необхідно 
+	a) визначити і вивести в консоль площу трикутника 
+	b) перевірити чи цей трикутник є прямокутним і вивести в консоль результат перевірки.
+Здійснювати перевірку чи введені користувачем значення коректні, в іншому випадку вивести 'Incorrect data‘.
+ Результат обчислення площі трикутника виводити в консоль з точністю 3 знаки після коми (наприклад:  8.42355465 =>  8.424). */
+
+    const a = +prompt("Enter number a");
+    const b = +prompt("Enter number b");
+    const c = +prompt("Enter number c");
+ 
+   
+
+    if(isNaN(a) || isNaN(b) || isNaN(c) || a===0 || b===0 ||c==0) {
+	alert("Incorrect data");
+    }
+
+     const p = (a+b+c)/2;
+    const s = (p*(p-a)*(p-b)*(p-c))**(1/2);
+    if(isNaN(s)){
+	    alert("Incorrect data")
+    }
+
+    if (a*a==b*b+c*c || b*b==a*a+c*c || c*c==a*a+b*b){
+   console.log("Цей трикутник є прямокутним ")
+    }
+
+console.log(`Площа трикутника  ${s.toFixed(3)}`);
+
+/*
+7. Написати умовну конструкцію, яка в залежності від часу доби виводитиме відповідне привітання. 
+Потрібно отримати реальний час доби із системи. Зробити 2 способами через 2 різних умовних оператора.
+В діапазоні годин 23-5 – має виводитися привітання “Доброї ночі”
+В діапазоні годин 5-11 – має виводитися привітання “Доброго ранку”
+В діапазоні годин 11-17 – має виводитися привітання “Доброго дня”
+В діапазоні годин 17-23 – має виводитися привітання “Доброго вечора”.
+*/
+const today = new Date();
+const currentHour = today.getHours();
+
+//variant 1
+  switch(currentHour){
+  case 23:
+  case 00:
+  case 01:
+  case 02:
+  case 03:
+  case 04:
+  case 05:
+  console.log("Доброї ночі")
+  break;
+  case 06:
+  case 07:
+  case 08:
+  case 09:
+  case 10:
+  case 11:
+  console.log("Доброго ранку")
+  break;
+  case 12:
+  case 13:
+  case 14:
+  case 15:
+  case 16:
+  case 17:
+  console.log("Доброго дня")
+  break;
+
+  default:
+  console.log("Доброго вечора")
+  break;
+
+}
+
+//variant 2
+
+if(currentHour>=23 && currentHour <= 5)
+   console.log("Доброї ночі");
+else if (currentHour>=06 && currentHour<=11)
+  console.log("Доброго ранку");
+else if (currentHour>=12 && currentHour<=17) 
+  console.log("Доброго дня");
+else
+  console.log("Доброго вечора")
