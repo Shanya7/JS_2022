@@ -4,7 +4,7 @@
   Якщо вік менше 10 років вивести “Ви ще надто молоді”, */
 
   //#1
-  let isAdult = prompt("How old are you? ")
+ const isAdult = prompt("How old are you? ")
 
   if(isAdult>=18){
      alert("Ви досягли повнолітнього віку");
@@ -17,13 +17,13 @@
 
   //#2
 
-  let isAdult = prompt("How old are you? ")
+  const isAdult = prompt("How old are you? ")
 
   isAdult>=18 ? alert("Ви досягли повнолітнього віку") : alert("Ви ще надто молоді");
 
 
 //#3
-  let isAdult = prompt("How old are you? ")
+  const isAdult = prompt("How old are you? ")
 
   if(isAdult>0 && isAdult<10)
   {
