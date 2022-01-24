@@ -17,4 +17,4 @@ function calcRectangleArea(width, height){
         console.log(Error);
     }
 }
-calcRectangleArea(3,"@")
+calcRectangleArea(3,8)
