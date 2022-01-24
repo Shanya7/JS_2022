@@ -23,14 +23,12 @@ function showUser(id) {
   
     for (let i of ids) {
       try {
-        console.log(showUser(i));
         myArray.push(showUser(i));
       } catch (exception) {
-        console.log(exception.name + ": " + exception.message + ": ");
+        console.log(exception.name + ": " + exception.message + ": "+ i);
       }
     }
-  
     console.log(myArray);
   }
-  
   showUsers([7, -12, 44, 22]);
+  
