@@ -12,34 +12,25 @@ Error: ID must not be negative: -12
 [ {id: 7}, {id: 44}, {id: 22} ]
 */
 
-function showUser(id){
-    let myArray = [];
-    let negativeNumber = [];
-    
-try{
-
-    for(let i=0; i<id.length; i++) {
-        if(id[i]>0){
-            myArray.push(id[i])
-        }
-        else{
-            negativeNumber.push(id[i])     
-        }
-       
-    } 
-    if(id.length!=myArray.length){
-        throw new Error("ID must not be negative")     
-    } 
-    return myArray;
-}
-catch(exception){
-    alert(exception.name + ": "+ exception.message + ": "+negativeNumber)
+function showUser(id) {
+    if (id < 0) {
+      throw new Error("ID must not be negative");
     }
-}  
-//showUser([7, -12, 44, 22]);
-//
-function showUsers(ids){
-    
-
-}
-showUsers([7, -12, 44, 22]);
+    return { id: id };
+  }
+  function showUsers(ids) {
+    const myArray = [];
+  
+    for (let i of ids) {
+      try {
+        console.log(showUser(i));
+        myArray.push(showUser(i));
+      } catch (exception) {
+        console.log(exception.name + ": " + exception.message + ": ");
+      }
+    }
+  
+    console.log(myArray);
+  }
+  
+  showUsers([7, -12, 44, 22]);
