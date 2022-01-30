@@ -1,0 +1,53 @@
+<!--4. На HTML-сторінці є ненумерований список з id="list", який складається із 5 елементів. У модальному вікні необхідно послідовно вивести вміст:
+	1) першого елемента списку
+	2) останнього елемента списку
+	3) другого елемента списку
+	4) четвертого елемента списку
+	5) третього елемента списку
+Зробіть завдання 2 різними способами.	
+Приклад:
+•	1
+•	2
+•	3
+•	4
+•	5
+Результат виводу: 1, 5, 2, 4, 3 -->
+<html>
+    <head>
+        <title>My title</title>
+    </head>
+    <body>
+        <ul id="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+          
+    <script>
+        let liElements = document.getElementsByTagName("li");
+        let myArray=[];
+        let newOrderedList = " ";
+        for(let i=0; i<liElements.length; i++){
+           myArray.push(liElements[i].innerHTML)
+        }
+        while(myArray.length>=1){
+            newOrderedList += `${myArray.shift()} `;
+            if(myArray.length!==0)
+            newOrderedList +=`${myArray.pop()} `;        
+        }
+        console.log(newOrderedList.trim()) 
+        //**********2nd***************************
+        
+        let myList=document.getElementById("list");
+     
+        myList.firstElementChild.nextElementSibling.before(myList.lastElementChild);
+        myList.lastElementChild.previousElementSibling.before(myList.lastElementChild);
+
+        console.log(myList.innerText)      
+
+        
+    </script>
+    </body>
+</html>
