@@ -1,24 +1,27 @@
 <!--6. Задано HTML-сторінку:-->
 <html>
-    <head>
-        <title>My title</title>
-    </head>
-    <body>
-<input type="text" id="input1" value="Text1">
-<input type="text" id="input2" value="Text2">
 
-<script>
-    let element1 = document.getElementById("input1");
-    let element2 = document.getElementById("input2");
-    element1.value = prompt("Enter first value");
-    element2.value = prompt("Enter second value");
+<head>
+    <title>My title</title>
+</head>
 
-    let myInputs = document.getElementsByTagName("input");
-    myInputs[0].parentNode.appendChild(myInputs[0]);      
-   
-    
-</script>
-  </body>
-  </html>
+<body>
+    <input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+
+    <script>
+        const element1 = document.getElementById("input1");
+        const element2 = document.getElementById("input2");
+        element1.value = prompt("Enter first value");
+        element2.value = prompt("Enter second value");
+
+        const myInputs = document.getElementsByTagName("input");
+        myInputs[0].parentNode.appendChild(myInputs[0]);
+
+
+    </script>
+</body>
+
+</html>
 <!--1)	Користувач почергово вводить 2 повідомлення (використати prompt()). 1-е повідомлення записується в 1-ий <input>, 2-ге – в 2-ий.
 2)	Поміняти значення 1-го і 2-го інпутів місцями.-->
