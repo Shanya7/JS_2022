@@ -22,18 +22,19 @@
         <script>
             function applyStyle(){
 
-            let h1 = document.getElementsByTagName("h1");
+            let h1 = document.getElementsByTagName("h1")[0];
             let firstParagraph = document.getElementsByTagName("p")[0]
             let secondParagraph = document.getElementsByTagName("p")[1]
             let thirdParagraph =document.getElementsByTagName("p")[2]
             let fourthParagraph = document.getElementsByTagName("p")[3].innerText
             let myList = document.getElementById("myList").children;
-            let invisibleText = document.getElementsByTagName("span")
+            let invisibleText = document.getElementsByTagName("span")[0];
 
 
-             h1.style.backgroundColor= "green"
-            // firstParagraph.style.innerText= "bold"
-             invisibleText.style.backgroundColor="transparent"
+            console.log(h1)
+            h1.style.backgroundColor = "green";
+            firstParagraph.style.fontStyle = "bold"
+             invisibleText.style.color="transparent";
             }
            
 
