@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>My title</title>
-    </head>
-        <body>
-		    <h1>I'am a big header!!!</h1>
-        <div id="myDiv">
-            <p>First paragraph</p>
-            <p>Second paragraph</p>
-            <p>Third paragraph</p>
-            <p>Fourth paragraph</p>
-        </div>
-        <ul id="myList">
-            <li>Make</li>
-            <li>me</li>
-            <li>horizontal!</li>
-        </ul>
-        <span>Make me invisible, please!</span>
-        <button onclick="applyStyle()">Apply styles</button>
-        <script>
-            function applyStyle(){
 
-            let h1 = document.getElementsByTagName("h1")[0];
-            let firstParagraph = document.getElementsByTagName("p")[0]
-            let secondParagraph = document.getElementsByTagName("p")[1]
-            let thirdParagraph =document.getElementsByTagName("p")[2]
-            let fourthParagraph = document.getElementsByTagName("p")[3]
-            let myList = document.getElementById("myList");
-            let invisibleText = document.getElementsByTagName("span")[0];
+<head>
+    <title>My title</title>
+</head>
 
+<body>
+    <h1>I'am a big header!!!</h1>
+    <div id="myDiv">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+    </div>
+    <ul id="myList">
+        <li>Make</li>
+        <li>me</li>
+        <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+    <button onclick="applyStyle()">Apply styles</button>
+    <script>
+        function applyStyle() {
 
-          
+            const h1 = document.getElementsByTagName("h1")[0];
+            const firstParagraph = document.getElementsByTagName("p")[0]
+            const secondParagraph = document.getElementsByTagName("p")[1]
+            const thirdParagraph = document.getElementsByTagName("p")[2]
+            const fourthParagraph = document.getElementsByTagName("p")[3]
+            const myList = document.getElementById("myList");
+            const invisibleText = document.getElementsByTagName("span")[0];
+
             h1.style.backgroundColor = "green";
             firstParagraph.style.fontWeight = "bold";
             secondParagraph.style.color = "red";
             thirdParagraph.style.textDecoration = "underline";
             fourthParagraph.style.fontStyle = "italic";
-            myList.style.display ="inline-flex"
-            myList.style.listStyle="none"
-            invisibleText.style.color= "transparent";
-            }
-            
-           
+            myList.style.display = "inline-flex"
+            myList.style.listStyle = "none"
+            invisibleText.style.color = "transparent";
+        }
 
-        </script>
-	    </body>
+    </script>
+</body>
 
-        </html>
+</html>
 <!--Напишіть скріпт, який за допомогою засобів DOM простилізує сторінку так як показано нижче:-->
- 
-
-
