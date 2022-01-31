@@ -15,7 +15,7 @@
     <p>Another text</p>
 </body>
 <script>
-    let myElements = document.getElementById("text").querySelectorAll("p");
+    const myElements = document.getElementById("text").querySelectorAll("p");
     for (let i = 0; i < myElements.length; i++) {
         alert(`Selector text ${[i]}: ${myElements[i].innerHTML} `)
     }
