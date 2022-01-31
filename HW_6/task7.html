@@ -1,0 +1,31 @@
+<!--7. Напишіть скріпт, який за допомогою засобів DOM створить для порожньої HTML-сторінки таку структуру з тегів
+     і їх атрибутів.-->
+	 
+<html>
+    <head>
+        <title>My title</title>
+    </head>
+    <body>
+        <script>
+            let mainElement = document.createElement("main");
+            mainElement.className = "mainClass check item";
+            let divElement = document.createElement("div");
+            divElement.id = "myDiv";
+            
+            document.body.append(mainElement);
+            mainElement.prepend(divElement);
+            divElement.insertAdjacentHTML('afterbegin', '<p>First paragraph</p>')
+         </script> 
+    </body>
+</html>
+
+
+
+
+<!-- 
+     <main class="mainClass check item"> 	
+		        <div id="myDiv">
+           <p>First paragraph</p>           
+         </div>
+       </main>
+    -->
