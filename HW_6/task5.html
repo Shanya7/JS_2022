@@ -27,7 +27,7 @@
             let secondParagraph = document.getElementsByTagName("p")[1]
             let thirdParagraph =document.getElementsByTagName("p")[2]
             let fourthParagraph = document.getElementsByTagName("p")[3]
-            let myList = document.getElementById("myList").children;
+            let myList = document.getElementById("myList");
             let invisibleText = document.getElementsByTagName("span")[0];
 
 
@@ -37,9 +37,11 @@
             secondParagraph.style.color = "red";
             thirdParagraph.style.textDecoration = "underline";
             fourthParagraph.style.fontStyle = "italic";
-            invisibleText.style.color="transparent";
+            myList.style.display ="inline-flex"
+            myList.style.listStyle="none"
+            invisibleText.style.color= "transparent";
             }
-            console.log(myList)
+            
            
 
         </script>
