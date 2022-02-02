@@ -9,17 +9,18 @@
 
     <button id="liveBtn">Live button</button>
     <script>
-                function mouseoverBtn() {
-            document.body.insertAdjacentHTML('beforeend','<p>Mouse on me!</p>');
-        } 
+        function mouseoverBtn() {
+            document.body.insertAdjacentHTML('beforeend', '<p>Mouse on me!</p>');
+        }
 
         function clickBtn() {
-           document.body.insertAdjacentHTML('beforeend', '<p>I was pressed!</p>')
+            document.body.insertAdjacentHTML('beforeend', '<p>I was pressed!</p>')
         };
 
-        function mouseoutBtn(){
-            document.body.insertAdjacentHTML('beforeend','<p>Mouse is not on me!</p>');
+        function mouseoutBtn() {
+            document.body.insertAdjacentHTML('beforeend', '<p>Mouse is not on me!</p>');
         }
+
         const liveBtn = document.getElementById("liveBtn")
         liveBtn.addEventListener("mouseover", mouseoverBtn);
         liveBtn.addEventListener("click", clickBtn)
