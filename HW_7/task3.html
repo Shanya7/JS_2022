@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="makePageBlue()">Click to make page blue</button>
+        <button ondblclick="makePagePink()">Double click to make the page pink</button>
+        <button onfocusin="makePageBrown()" onfocusout="makePageWhite()">Click and hold to make page brown</button>
+        <a onmouseover="makePageYellow()" onmouseout="makePageWhite()" href="#">Hower over to make page yellow</a>
+    </div>
+
+    <script>
+        function makePageBlue() {
+            document.body.style.backgroundColor = "blue"
+        }
+        function makePagePink() {
+            document.body.style.backgroundColor = "pink"
+        }
+        function makePageBrown() {
+            document.body.style.backgroundColor = "brown"
+        }
+        function makePageYellow() {
+            document.body.style.backgroundColor = "yellow"
+        }
+        function makePageWhite() {
+            document.body.style.backgroundColor = "white"
+        }
+
+    </script>
+</body>
+
+</html>
