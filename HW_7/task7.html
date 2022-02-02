@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <select name="country" id="country">
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>
+                        
+    <select name="cities" id="cities"></select>
+    <p></p>
+    
+    
+
+    <script>
+       
+        const countryObject = {
+            "Germany": ["Berlin", "Hurth"],
+            "Ukraine": ["Kyiv", "Lviv"],
+            "USA": ["New York", "Chicago", " Washington"]
+
+        }
+        let paragraph = document.getElementsByTagName("p")
+        let countrySel;
+        let citySel;
+        window.onload = function () {
+            countrySel = document.getElementById("country");
+            citySel = document.getElementById("cities");
+
+            for (let x in countryObject) {
+                countrySel.options[countrySel.options.length] = new Option(x);
+
+            }
+            countrySel.onchange = function () {
+                citySel.length = 1;
+                document.getElementsByTagName("p")[0].innerHTML = countrySel.value
+
+                let y = countryObject[this.value]
+                for (let i = 0; i < y.length; i++) {
+                    citySel.options[citySel.options.length] = new Option(y[i])
+                    
+                   // document.body.insertAdjacentText("afterend",citySel.value)
+                }
+                //document.getElementsByTagName("p")[0].innerHTML = `${countrySel.value}, ${citySel.value}`
+            }
+        }
+
+    </script>
+</body>
