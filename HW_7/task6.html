@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <span>Width: </span><span id="width"></span>
+    <span>Height: </span><span id="height"></span>
+
+    <script>
+
+        window.onresize = showWindowSize;
+        function showWindowSize() {
+            document.getElementById('width').innerText = window.innerWidth + ",";
+            document.getElementById('height').innerText = window.innerHeight;
+
+        }
+    </script>
+</body>
+
+</html>
