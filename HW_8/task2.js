@@ -6,9 +6,17 @@ true
 
 */
 function checkEmail (value) {
-    let regExp=/\w+\d+@+.+/g
+    let regExp=/\w+|\d+\S+/g;
    let result = regExp.test(value);
-   return result
+   return result;
 }
 console.log(checkEmail("Qmail2@gmail.com"))
 
+
+
+function checkEmail2 (value) {
+    let regExp=/\S+@\S+\.\S+/;
+   let result = regExp.test(value);
+   return result;
+}
+console.log(checkEmail2("Qmail2@gmail.com"))
