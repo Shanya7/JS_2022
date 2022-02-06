@@ -6,7 +6,7 @@
 //  •  Символ “-” не може повторюватися, не може бути 1-им символом емейлу.
 
 function checkEmail(email) {
-  let regExp = /^\w+@/g;
+  let regExp = /^\w+\-{0,1}\@\w+\.\w+$/g;
   let result = regExp.test(email);
   if (result == true) {
     console.log("Email is correct!");
