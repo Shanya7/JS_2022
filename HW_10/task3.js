@@ -18,7 +18,7 @@ const delay = (i, time) =>
 function showNumbers() {
   let time = 0;
   for (let i = 0; i <= 10; i++) {
-    time += Math.random() * (3000 - 1000) + 1000;
+    time += (Math.random() * (3000 - 1000) + 1000);
     delay(i, time).then(function (data) {
       console.log(data);
     });
