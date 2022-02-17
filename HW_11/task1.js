@@ -5,10 +5,9 @@ const path = require("path");
 const operatingSystem = `OS type: ${os.type()}`;
 const username = `Current user name: ${os.userInfo().username}`;
 const workTime = `System work time: ${os.uptime()/60} minutes`;
-const currentWorkDirectory = `System work directory: ${path.dirname(
-  "HW_11/task1.js"
-)}`;
-const fileName = `Server file name: ${path.basename("HW_11/task1.js")}`;
+const file = path.resolve("task1.js")
+const currentWorkDirectory = `System work directory: ${path.dirname(file)}`;
+const fileName = `Server file name: ${path.basename(file)}`;
 
 http
   .createServer(function (request, response) {
