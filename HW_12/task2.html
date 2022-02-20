@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick=downloadBooks()>Download books</button>
+    <ul></ul>
+    <script>
+        function downloadBooks() {
+
+            const myRequest = new XMLHttpRequest();
+            function printBooks() {
+                const booksList = JSON.parse(myRequest.response);
+                let authList = [];
+                for (let book of booksList) {
+                    const myUl = document.getElementsByTagName("ul")[0];
+                    let li = document.createElement('li')
+                    li.innerText = book.author;
+                    myUl.append(li);
+                }
+            }
+            myRequest.onreadystatechange = function () {
+                if (myRequest.readyState == 4) {
+                    printBooks();
+                }
+            }
+            myRequest.open("GET", "books.json", true);
+            myRequest.send();
+        }
+
+    </script>
+</body>
+
+</html>
